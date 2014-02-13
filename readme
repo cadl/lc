@@ -1,0 +1,24 @@
+a toy lambda calculus interpreter
+
+
+$ lua lc.lua 
+or call repl() in lua repl ...
+
+<<< ^x.x
+>>> ^x.(x)
+
+<<< a b c d
+>>> (((a b) c) d)
+
+<<< (^x.x) y
+>>> y
+
+<<< (^n.^f.^x.f (n f x)) ^f.^x.x
+>>> ^f.(^x.((f x)))
+
+<<< (^m.^n.^f.^x.m f (n f x)) (^f.^x. x) (^f.^x.f x)
+>>> ^f.(^x.((f x)))
+
+
+no built-in church encoding
+no variable assignment
